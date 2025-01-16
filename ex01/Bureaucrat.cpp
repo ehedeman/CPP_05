@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:54:05 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 13:43:59 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:52:06 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,10 @@ void			Bureaucrat::DecrementGrade(void)
 }
 void			Bureaucrat::signForm(Form &f)const
 {
-	f.beSigned(this);
+	if (f.getSigned())
+		std::cout << this->getName() << " signed " << f.getName() << "." << std::endl;
+	else
+		std::cout << this->getName() << " couldnt sign " << f.getName() << "." << std::endl;
 }
 
 //custom exceptions

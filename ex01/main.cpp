@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:53:58 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 13:40:49 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:53:27 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,9 @@ int main(void)
 			Bureaucrat l("Louis", 1);
 			Form g("Great Form", 50, 20);
 
+			g.beSigned(&l);
 			l.signForm(g);
-			l.signForm(g);
+			g.beSigned(&l);
 		}
 		catch(const std::exception& e)
 		{

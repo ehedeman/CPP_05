@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 12:27:36 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 13:45:03 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:52:34 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,7 @@ void				Form::beSigned(const Bureaucrat *b)
 		return ;
 	}
 	if (b->getGrade() <= this->getSignGrade())
-	{
 		this->_signed = true;
-		std::cout << b->getName() << " signed " << this << "." << std::endl;
-	}
 	else
 		throw GradeTooLowException();
 }
