@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:54:05 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 12:59:23 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:44:07 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ const char	*Bureaucrat::GradeTooLowException::what(void)const throw()
 
 std::ostream &operator<<(std::ostream &o, Bureaucrat *b)
 {
-	std::cout << "Bureaocrat ostream operator called for " << b->getName() << std::endl;
+//	std::cout << "Bureaocrat ostream operator called for " << b->getName() << std::endl;
 	o << b->getName() << ", Bureaucrat grade " << b->getGrade();
 	return (o);
 }
