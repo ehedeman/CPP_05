@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:54:02 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 12:23:29 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:56:24 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ public:
 							~Bureaucrat(void);							//destructor
 
 	Bureaucrat				&operator=(const Bureaucrat &copy);			//assignment operator
-	std::ostream			&operator<<(const Bureaucrat &_this);
 
 	//setters
 	void					setGrade(int new_grade);
@@ -49,3 +48,5 @@ public:
 			const char			*what(void)const throw();
 	};
 };
+
+std::ostream			&operator<<(std::ostream &o, Bureaucrat *b);

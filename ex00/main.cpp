@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:53:58 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 12:23:08 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:59:56 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ int main(void)
 	{
 		try
 		{
-			Bureaucrat e("Herman", 150);
-			e.DecrementGrade();
+			Bureaucrat b("Herman", 150);
+			std::cout << &b << std::endl;
+			b.DecrementGrade();
 		}
 		catch(const std::exception& e)
 		{
@@ -29,7 +30,7 @@ int main(void)
 	{
 		try
 		{
-			Bureaucrat e("Marnie", 160);
+			Bureaucrat f("Marnie", 160);
 		}
 		catch(const std::exception& e)
 		{
@@ -40,8 +41,8 @@ int main(void)
 		{
 		try
 		{
-			Bureaucrat e("Linda", 1);
-			e.IncrementGrade();
+			Bureaucrat f("Linda", 1);
+			f.IncrementGrade();
 		}
 		catch(const std::exception& e)
 		{
@@ -52,7 +53,7 @@ int main(void)
 	{
 		try
 		{
-			Bureaucrat e("Bob", 0);
+			Bureaucrat f("Bob", 0);
 		}
 		catch(const std::exception& e)
 		{

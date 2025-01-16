@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:54:05 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 12:25:02 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:59:23 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,6 @@ Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &copy)
 	return *this;
 }
 
-std::ostream &Bureaucrat::operator<<(const Bureaucrat &_this)
-{
-	std::cout << "Bureaocrat ostream operator called for " << this->getName() << std::endl;
-	return (std::cout << _this.getName() << ", Bureaucrat grade " << _this.getGrade());
-}
-
 //setters
 void					Bureaucrat::setGrade(int new_grade)
 {
@@ -90,4 +84,11 @@ const char	*Bureaucrat::GradeTooHighException::what(void)const throw()
 const char	*Bureaucrat::GradeTooLowException::what(void)const throw()
 {
 	return("Woah there! Thats a really high grade, you sure we have that?");
+}
+
+std::ostream &operator<<(std::ostream &o, Bureaucrat *b)
+{
+	std::cout << "Bureaocrat ostream operator called for " << b->getName() << std::endl;
+	o << b->getName() << ", Bureaucrat grade " << b->getGrade();
+	return (o);
 }
