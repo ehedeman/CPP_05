@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 12:27:36 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 13:33:22 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:45:03 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Form::~Form()
 	std::cout << "Form destructor called." << std::endl;
 }
 
-Form	&Form::operator=(const Form &copy)
+Form				&Form::operator=(const Form &copy)
 {
 	std::cout << "Assignment operator called." << std::endl;
 	if (this == &copy)
@@ -62,12 +62,12 @@ Form	&Form::operator=(const Form &copy)
 // }
 
 //getters
-int			Form::getExecGrade()const{return (this->exe_grade);}
-int			Form::getSignGrade()const{return (this->sign_grade);}
-std::string	Form::getName()const{return (this->name);}
+int					Form::getExecGrade()const{return (this->exe_grade);}
+int					Form::getSignGrade()const{return (this->sign_grade);}
+std::string			Form::getName()const{return (this->name);}
 bool				Form::getSigned()const{return (this->_signed);}
 
-void			Form::beSigned(const Bureaucrat *b)
+void				Form::beSigned(const Bureaucrat *b)
 {
 	if (this->getSigned())
 	{
@@ -75,7 +75,10 @@ void			Form::beSigned(const Bureaucrat *b)
 		return ;
 	}
 	if (b->getGrade() <= this->getSignGrade())
+	{
 		this->_signed = true;
+		std::cout << b->getName() << " signed " << this << "." << std::endl;
+	}
 	else
 		throw GradeTooLowException();
 }
@@ -90,9 +93,9 @@ const char			*Form::GradeTooLowException::what() const throw()
 	return ("Grade too low.");
 }
 
-std::ostream	&operator<<(std::ostream &o, Form *f)
+std::ostream		&operator<<(std::ostream &o, Form *f)
 {
-	std::cout << "Form ostream operator called for " << f->getName() << std::endl;
+//	std::cout << "Form ostream operator called for " << f->getName() << std::endl;
 	o << "Form " << f->getName();
 	return (o);
 }

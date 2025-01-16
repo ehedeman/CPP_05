@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:54:05 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 13:15:25 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:43:59 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,9 @@ void			Bureaucrat::DecrementGrade(void)
 {
 	this->setGrade(this->grade + 1);
 }
-void			Bureaucrat::signForm(const Form *f)const
+void			Bureaucrat::signForm(Form &f)const
 {
-	if (f->getSigned())
-		std::cout << this << " signed " << f << std::endl;
-	else
-		std::cout << this << " couldn't sign " << f << " because their grade was too low." << std::endl;
+	f.beSigned(this);
 }
 
 //custom exceptions
@@ -95,7 +92,7 @@ const char	*Bureaucrat::GradeTooLowException::what(void)const throw()
 
 std::ostream &operator<<(std::ostream &o, Bureaucrat *b)
 {
-	std::cout << "Bureaocrat ostream operator called for " << b->getName() << std::endl;
+//	std::cout << "Bureaocrat ostream operator called for " << b->getName() << std::endl;
 	o << b->getName() << ", Bureaucrat grade " << b->getGrade();
 	return (o);
 }

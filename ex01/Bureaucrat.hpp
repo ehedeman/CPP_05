@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:54:02 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 13:27:03 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:39:49 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ public:
 	//member functions
 	void					IncrementGrade(void);
 	void					DecrementGrade(void);
-	void					signForm(const Form *f)const;
+	void					signForm(Form &f)const;
 	
 	//custom exceptions
 	class 					GradeTooHighException : public std::exception
