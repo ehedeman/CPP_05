@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 14:11:06 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 14:17:02 by ehedeman         ###   ########.fr       */
+/*   Created: 2025/01/16 14:11:04 by ehedeman          #+#    #+#             */
+/*   Updated: 2025/01/16 14:30:10 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ShrubberyCreationForm.hpp"
+#include "AForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+class ShrubberyCreationForm : public AForm
 {
-}
+private:
 
-ShrubberyCreationForm::~ShrubberyCreationForm()
-{
-}
+public:
+	ShrubberyCreationForm(std::string target);
+	~ShrubberyCreationForm();
+	
+	void		execute(Bureaucrat const &executor) const;
+	void		beSigned(const Bureaucrat *b);
+};

@@ -33,7 +33,7 @@ public:
 	AForm				&operator=(const AForm &copy);						//assignment operator
 	
 	//setters
-	//void				setSigned();
+	void				setSigned(bool state);
 	//getters
 	int					getExecGrade()const;
 	int					getSignGrade()const;
@@ -42,7 +42,7 @@ public:
 	
 	//member functions
 	void				beSigned(const Bureaucrat *b);
-	virtual void		executeForm(AForm const & form) = 0;				//purely virtual function
+	virtual void		execute(Bureaucrat const &executor) const = 0;				//purely virtual function
 	//custom exceptions
 	class 				GradeTooHighException : public std::exception
 	{

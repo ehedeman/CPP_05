@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 14:15:27 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 14:16:35 by ehedeman         ###   ########.fr       */
+/*   Created: 2025/01/16 14:11:06 by ehedeman          #+#    #+#             */
+/*   Updated: 2025/01/16 14:28:42 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PresidentialPardonForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target)
+//sign 145, exec 137
+
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
 {
 }
 
-PresidentialPardonForm::~PresidentialPardonForm()
+ShrubberyCreationForm::~ShrubberyCreationForm()
 {
+}
+
+void		ShrubberyCreationForm::execute(Bureaucrat const &executor) const
+{
+	if (executor.getGrade() <= 137 && this->getSigned())
+		blah();
+		//insert code to open file here
 }

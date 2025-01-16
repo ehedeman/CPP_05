@@ -6,15 +6,15 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:54:02 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 13:49:57 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:24:19 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -38,7 +38,8 @@ public:
 	//member functions
 	void					IncrementGrade(void);
 	void					DecrementGrade(void);
-	void					signForm(Form &f)const;
+	void					signForm(AForm &f)const;
+	void					executeForm(AForm const & form);
 	
 	//custom exceptions
 	class 					GradeTooHighException : public std::exception

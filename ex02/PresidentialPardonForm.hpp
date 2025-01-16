@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 14:11:04 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 14:17:58 by ehedeman         ###   ########.fr       */
+/*   Created: 2025/01/16 14:15:14 by ehedeman          #+#    #+#             */
+/*   Updated: 2025/01/16 14:30:00 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 
-class ShrubberyCreationForm : public AForm
+class PresidentialPardonForm : public AForm
 {
 private:
 
 public:
-	ShrubberyCreationForm(std::string target);
-	~ShrubberyCreationForm();
+	PresidentialPardonForm(std::string target);
+	~PresidentialPardonForm();
 	
-	void		executeForm(AForm const & form);
+	void		execute(Bureaucrat const &executor) const;
+	void		beSigned(const Bureaucrat *b);
 };
