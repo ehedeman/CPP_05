@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 13:52:05 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/17 14:01:36 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/17 15:33:01 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ public:
 	Intern					&operator=(const Intern &copy);
 
 	AForm					*makeForm(std::string form_name, std::string target_name);
+	AForm					*makeShrub(std::string _target);
+	AForm					*makePres(std::string _target);
+	AForm					*makeRobo(std::string _target);
+
 	class 					NoSuchFormException : public std::exception
 	{
 		public:
