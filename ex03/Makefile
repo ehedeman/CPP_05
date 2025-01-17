@@ -6,7 +6,7 @@
 #    By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/14 14:53:54 by ehedeman          #+#    #+#              #
-#    Updated: 2025/01/17 13:50:23 by ehedeman         ###   ########.fr        #
+#    Updated: 2025/01/17 14:08:14 by ehedeman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRC =	Bureaucrat.cpp				\
 		ShrubberyCreationForm.cpp	\
 		PresidentialPardonForm.cpp	\
 		RobotomyRequestForm.cpp		\
+		Intern.cpp					\
 		main.cpp
 
 OBJS_DIR = objs/
@@ -24,9 +25,10 @@ OBJS = $(SRC:.cpp=.o)
 OBJS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
 
 INCLUDES =	Bureaucrat.hpp AForm.hpp		\
-			ShrubberyCreationForm.hpp 	\
-			PresidentialPardonForm.hpp	\
-			RobotomyRequestForm.hpp
+			ShrubberyCreationForm.hpp 		\
+			PresidentialPardonForm.hpp		\
+			RobotomyRequestForm.hpp			\
+			Intern.hpp
 
 CXX = c++
 

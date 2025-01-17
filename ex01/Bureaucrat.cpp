@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:54:05 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/16 13:52:06 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/17 13:47:48 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ const char	*Bureaucrat::GradeTooHighException::what(void)const throw()
 }
 const char	*Bureaucrat::GradeTooLowException::what(void)const throw()
 {
-	return("Woah there! Thats a really high grade, you sure we have that?");
+	return("Woah there! Thats a really low grade, you sure we have that?");
 }
 
 std::ostream &operator<<(std::ostream &o, Bureaucrat *b)

@@ -6,7 +6,7 @@
 #    By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/14 14:53:54 by ehedeman          #+#    #+#              #
-#    Updated: 2025/01/16 13:22:29 by ehedeman         ###   ########.fr        #
+#    Updated: 2025/01/17 13:49:34 by ehedeman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ fclean: clean
 
 re: fclean all
 
-leaks: 
+leaks: all
 	valgrind --leak-check=full	\
          --show-leak-kinds=all ./$(NAME)
 
